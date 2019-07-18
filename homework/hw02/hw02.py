@@ -33,6 +33,8 @@ def product(n, term):
     162
     """
     "*** YOUR CODE HERE ***"
+    
+
 
 # The identity function, defined using a lambda expression!
 identity = lambda k: k
