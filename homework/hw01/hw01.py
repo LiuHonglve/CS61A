@@ -9,9 +9,9 @@ def a_plus_abs_b(a, b):
     5
     """
     if b < 0:
-        f = a - b
+        f = sub
     else:
-        f = a + b
+        f = add
     return f(a, b)
 
 def two_of_three(a, b, c):
@@ -40,6 +40,13 @@ def largest_factor(n):
     1
     """
     "*** YOUR CODE HERE ***"
+    for i in range(1, n):
+        if (n%i == 0):
+            a=i
+            i=i+1
+    return a
+
+
 
 def if_function(condition, true_result, false_result):
     """Return true_result if condition is a true value, and
@@ -75,12 +82,19 @@ def with_if_function():
 
 def c():
     "*** YOUR CODE HERE ***"
+    if(3==2):
+        return t()
+    else:
+        return f()
 
 def t():
     "*** YOUR CODE HERE ***"
-
+    return 3-2
 def f():
     "*** YOUR CODE HERE ***"
+    return 3+2
+
+
 
 def hailstone(n):
     """Print the hailstone sequence starting at n and return its
@@ -98,3 +112,20 @@ def hailstone(n):
     7
     """
     "*** YOUR CODE HERE ***"
+    count = 1
+    print(n)
+    while n != 1:
+        if n % 2 == 0:
+            n = n//2
+            print(n)
+            count += 1
+        else:
+            n = 3*n + 1
+            print(n)
+            count += 1
+    return count
+a=hailstone(27)
+print(a)
+
+
+
