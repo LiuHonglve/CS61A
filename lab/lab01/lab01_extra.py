@@ -56,8 +56,9 @@ def both_positive(x, y):
     >>> both_positive(1, 1)
     True
     """
-    return x and y > 0 # You can replace this line!
-
+    #return x and y > 0 # You can replace this line!
+    if y > 0:
+        return bool(x)
 # While Loops
 
 def falling(n, k):
@@ -73,6 +74,17 @@ def falling(n, k):
     4
     """
     "*** YOUR CODE HERE ***"
+    sum = n
+    if k == 0:
+        return 1
+    elif k == 1:
+        return n
+    else:
+        while k > 1 :
+            k--
+            n--
+            sum = sum * n
+        return sum
 
 # Guessing Game
 
